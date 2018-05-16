@@ -19,3 +19,8 @@ Route::get('/contact', 'ContactController@index');
 Route::post('/contact/confirm', 'ContactController@confirm');
 Route::post('/contact/done', 'ContactController@done');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::delete('/delete/{id}', 'HomeController@delete');
